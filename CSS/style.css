@@ -1,0 +1,665 @@
+body{
+    margin: 0;padding: 0;font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+li {list-style:none; display: inline;} 
+
+
+a{text-decoration: none;}
+
+main {width: 100%;}
+
+header {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    z-index: 2;
+}
+
+nav {
+    font-size: 14px;
+    color: rgb(90, 87, 87);
+}
+
+/*Configuração Menu Principal*/
+
+li{
+    margin: 25px;
+    position: relative;
+    top: -30px;
+}
+
+.logo {
+    position: relative;
+    cursor: pointer;
+}
+
+.itensMenuPrincipal{
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+.itensMenuPrincipal:hover{
+    color: orange;
+    transition: all 0.4s linear;
+}
+
+.dropdownPai{
+    position: relative;
+}
+
+.dropFilho{
+    position: absolute;
+    display: none;
+    left: -20px;
+    padding:0;
+    text-align: center;
+    width:auto;
+    z-index: 9999999!important;
+    background-color: #fff;
+}
+
+.dropFilho:last-of-type{
+    right: -20px;
+}
+
+.dropFilho:first-of-type{
+    left: -20px;
+}
+
+
+.dropdownPai:hover .dropFilho{
+    display: block;
+    z-index: 9999999999999!important;
+}
+
+.menuMobile{
+    cursor: pointer;
+    display: none;
+}
+
+.logo-mobile{
+    position: absolute;
+    top: -10px;
+}
+
+.mobile {
+    display:none;
+    justify-content:center;
+    align-items: center;
+    background-color:#fff;
+    width: 100%;
+    height:auto;
+}
+.mobile ul {
+    height:100%;
+}
+.mobile li{
+    display: block;
+}
+
+.dropdownPaiMobile::after{
+    content: ' +';
+    color: orange;
+}
+
+.dropFilhoMobile{display:none}
+
+.sobre {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-image: url(../Imagens/Sobre/fundo.jpg);
+}
+
+.txtSobre {
+    width:40%;
+    margin-left: 60px;
+    font-size: 120%;
+    background-color: rgba(255,255,255, 0.5);
+    padding: 30px;
+}
+
+.title-txtSobre {
+    color: #2f2e2e;
+}
+
+.texto-txtSobre {
+    color: #2f2e2e;
+}
+
+.button-cinza {
+    background-color: rgba(96, 94, 94, 1);
+    padding: 15px;
+    border: rgba(96, 94, 94, 0);
+    transition: all 0.4s linear;
+}
+
+.button-cinza:hover{
+    background-color: rgb(41, 40, 40);
+}
+
+.videoAoVivo {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(66,66,66), rgb(46, 45, 45) 130%);
+}
+
+.videoAoVivo img {
+    width: 20%;
+    margin-left: 8%;
+}
+
+.txtVideoAoVivo {
+    max-width: 400px;
+}
+
+.title-videoAoVivo {
+    color: #f59f00;
+    margin: 30px 0;
+    line-height: 5px;
+}
+
+.txt-videoAoVivo {
+    color: #fff;
+    margin: 30px 0;
+}
+
+.pastor {
+    width: 100%;
+    background-image: url('../Imagens/Sobre/pastor.png');
+    text-align: right;
+    display: flex;
+    align-items: center;
+    height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.txtPastor {
+    max-width: 400px;
+    font-size: 140%;
+    position: relative;
+    left: 15%;
+    letter-spacing: 5px;
+}
+
+.title-txtPastor{font-weight: bolder;}
+
+.igrejas {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #a0a09f;
+}
+
+.contentIgrejas {
+    display: flex;
+    justify-content: flex-start;
+    width: 75%;   
+    flex-direction: column;
+}
+
+.titleIgrejas {
+    font-weight: bolder;
+    font-size: 200%;
+    letter-spacing: 8px;
+}
+
+.gridIgrejas {
+    display: grid;
+    grid-template-columns: repeat(4,1fr)
+}
+
+.fotoIgreja {
+    width: 80%;
+    position: relative;
+    margin: 10px;
+    transition: all 0.4s linear;
+}
+
+.fotoIgreja:hover{
+    filter: grayscale(0.1);
+    opacity: 0.8;
+    transition: all 0.4s linear;
+}
+
+.fotoIgreja img {
+    width: 100%;
+}
+
+.nomeIgreja {
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    z-index:20000;
+    position: absolute;
+    background-color: rgb(41, 40, 40);
+    color: #fff;
+}
+
+.estudo {
+    width: 100%;
+    height: 600px;
+    background-image: url('../Imagens/Sobre/estudo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoEstudo {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fff;
+}
+
+.titleTextoEstudo{
+    letter-spacing: 5px;
+    font-weight: normal;
+    color: #777474;
+    margin-bottom: 25px;
+}
+
+.textoEstudo p {
+    margin-top: -5px;
+    color: #9b9898;
+}
+
+.button-amarelo {
+    background-color: rgba(255, 166, 0, 1);
+    padding: 10px;
+    transition: all 0.4s linear;
+}
+
+.button-amarelo:hover {
+    background-color: rgb(41, 40, 40);
+    transition: all 0.4s linear;
+}
+
+.livros {
+    width: 100%;
+    height: 500px;
+    background-image: url('../Imagens/Sobre/livros.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.contentLivros {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;   
+    flex-direction: column;
+    position: relative;
+}
+
+.titleLivros {
+    font-size: 200%;
+    letter-spacing: 6px;
+    color: #000;
+    font-weight: bolder;
+    position: absolute;
+    top: 5%;
+}
+
+.artigos{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.contentArtigos{
+    
+    padding: 15px;
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.contentArtigos img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contentArtigos a {
+    text-align: center;
+    border-bottom: rgb(41, 40, 40);
+}
+
+.galeria {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.titleGaleria {
+    position: absolute;
+    top: -10px;
+    left: 15%;
+}
+
+.fotoPrincipal {
+    width: 70%;
+    height: 400px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.fotoPrincipal img {
+    width: 100%;
+    height: 100%;
+    transition: all 1s linear;
+}
+
+.fotoPrincipal img:hover {
+    opacity: 0.5;
+    transition: all 0.6s linear;
+}
+
+
+.fotos {width: 70%;}
+
+.fotos img {width: 16%;cursor: pointer;transition: all 0.4s linear;}
+.fotos img:hover{opacity: 0.2;transition: all 0.4s linear;}
+
+#moldura{
+    display: none;
+    background-color: #000;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:20202020;
+}
+.fotoSlide {
+    top:3%;
+    left:11%;
+    position:relative;
+}
+
+.fotoSlide img{
+    width:80%
+}
+
+.fechar {
+    color: white;
+    position: absolute;
+    font-size: 50px;
+    top: 10px;
+    left: 90%;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 5.5%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: transparent;
+}
+
+.next {
+    right: 8%;
+}
+
+.prev{
+    left: 10%;
+}
+
+
+footer {
+    width: 100%;
+    background-color: rgb(238, 230, 230);
+    height: 400px;
+}
+
+.footer1 {
+    display: flex;
+    align-items: center;
+    height: 250px;
+    justify-content: space-around;
+}
+
+.footer2{
+    display: flex;
+    height: 150px;
+    border-top: 1px solid #000;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.localizacao{
+    display:flex;
+    justify-content:center
+}
+
+.footer1 a {
+    width: 15%;
+}
+
+.footer1 .info{color: #2f2e2e;}
+.footer2{color:#2f2e2e;font-size: 14px;}
+
+.footer1 .info h2 {font-size: 33px;margin-bottom: 10px;}
+.footer1 .info p {font-size:17px;margin-top: -10px;}
+
+/*Medias Queries para o Menu*/
+@media (min-width:791px) and (max-width:1000px){
+    nav {
+        position: relative;
+    }
+
+    li{
+        position: relative;
+        top: 20px;
+        margin: 13px;
+    }
+
+    .logo {
+        position: absolute;
+        top: -20px;
+        left: 46%;
+    }
+    .slick-dots{
+        position: absolute;
+        top:410px!important
+    }
+}
+
+@media (max-width:790px){
+    .menuPrincipal ul li{display: none;}
+    .logo{left: 0;top:0;position: absolute;}
+    .menuMobile {display: block;position: absolute;top: 20px;right: 0;}
+    nav {display: flex;justify-content: space-evenly;}
+}
+
+/*Media Queries Sobre*/
+@media (max-width:730px){
+    .sobre{
+        flex-direction:column;
+        height:auto;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        position:relative
+    }
+    .video{width:77%;position:relative;}
+    .txtSobre{
+        width:70%;
+        position:relative;
+        left:0px;
+        margin:10px;
+        padding:15px;
+        display:flex;
+        justify-content:center;
+        flex-direction:column
+    }
+    .title-txtSobre{text-align:center}
+    .txtSobre .button-cinza{
+        padding: 0px;
+    }
+}
+
+/*Media Queries Video Ao Vivo*/
+@media (max-width:700px){
+    .videoAoVivo{
+        flex-direction:column;
+        justify-content:center;
+    }
+    .txtVideoAoVivo{text-align:center}
+    .videoAoVivo img{
+        position:relative;
+        left:-30px;
+        margin-top:35px
+    }
+}
+
+/*Media Queries Pastor*/
+@media (max-width:485px){
+    .pastor{display:flex;justify-content:flex-start;text-align:left;}
+    .txtPastor{left: 1%;width:95%;}
+}
+
+/*Media Queries Igrejas*/
+@media (min-width:561px) and (max-width:725px){
+    .gridIgrejas {
+        display: grid;
+        grid-template-columns: repeat(3,1fr)
+    }
+}
+
+@media (min-width:451px) and (max-width:560px){
+    .gridIgrejas {
+        display: grid;
+        grid-template-columns: 1fr 1fr
+    }
+    .titleIgrejas{letter-spacing: 5px;font-size: 170%;}
+}
+
+@media (max-width:450px){
+    .gridIgrejas {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .fotoIgreja{width:90%}
+    .titleIgrejas{letter-spacing: 5px;font-size: 170%;}
+}
+
+/*Media Queries Estudo*/
+
+@media (max-width:530px){
+    .estudo{background-color:blue}
+    .textoEstudo{width: 85%;}
+}
+
+/*Media Queries Livros*/
+
+@media (max-width:650px){
+    .livros{height: auto;}
+    .artigos{flex-direction: column;height: 85%;}
+}
+
+@media (min-width:343px) and (max-width:466px){
+    .titleLivros{
+        font-size:160%
+    }
+}
+
+@media (max-width:342px){
+    .titleLivros{
+        font-size:130%
+    }
+}
+
+/*Media Queries Galeria*/
+
+@media (max-width:794px){
+    .galeria{height:auto;}
+    .fotoPrincipal{display: none;}
+    .fotos{
+        display:grid;
+        grid-template-columns: 1fr 1fr ;
+        width:100%;
+        height: auto;
+        margin-top: 40px;
+        position:relative;
+    }
+    .fotos img{
+        width:80%;
+        margin: 10px;
+    }
+}
+
+@media (max-width:550px){
+    .fotos{grid-template-columns: 1fr;}
+}
+
+/*Media Queries Rodapé*/
+
+@media (max-width:775px){
+    .footer1{flex-direction: column;text-align:center;}
+    .footer2{flex-direction: column;}
+}
+
+@media(max-width:485px){
+    .footer1 .button-amarelo{
+        width:30%
+    }
+}
+
+@media (max-width:453px){
+    .footer2{
+        margin-top: 50px;
+        width:100%;
+        font-size:80%;
+        height:200px;
+        background-color: rgb(238, 230, 230);
+    }
+    .localizacao{width:80%}
+    .icons{margin-top:20px}
+}
